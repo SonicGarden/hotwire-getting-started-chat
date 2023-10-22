@@ -2,7 +2,9 @@
   <div class="messages-index-body">
     <%= render partial: 'message', collection: @messages %>
   </div>
-  <div class="messages-index__footer">
-    <%= link_to 'メッセージを作成', new_message_path, class: 'messages-index__footer-link' %>
-  </div>
+  <%= turbo_frame_tag Message.new, class: 'messages-index__footer' do %>
+    <div class="messages-index__footer">
+      <%= link_to 'メッセージを作成', new_message_path, class: 'messages-index__footer-link' %>
+    </div>
+  <% end %>
 </div>
