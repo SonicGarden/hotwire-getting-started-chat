@@ -6,7 +6,7 @@
     </div>
     <div class="message__actions">
       <%= link_to '編集', edit_message_path(message), class: 'message__actions-edit' %>
-      <%= button_to '削除', message_path(message), method: :delete, form_class: 'message__actions-destroy', class: 'message__actions-destroy-button', data: { turbo_confirm: '削除しますか？' } %>
+      <%= button_to '削除', message_path(message), method: :delete, form_class: 'message__actions-destroy', class: 'message__actions-destroy-button', data: { turbo_confirm: '削除しますか？', turbo_frame: '_top' } %>
     </div>
   </div>
 <% end %>
