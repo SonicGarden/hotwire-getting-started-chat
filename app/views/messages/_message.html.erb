@@ -1,10 +1,12 @@
-<div class="message">
-  <div class="message__body">
-    <p class="message__body-datetime"><%= l(message.created_at, format: :long) %></p>
-    <p class="message__body-content"><%= message.content %></p>
+<%= turbo_frame_tag message do %>
+  <div class="message">
+    <div class="message__body">
+      <p class="message__body-datetime"><%= l(message.created_at, format: :long) %></p>
+      <p class="message__body-content"><%= message.content %></p>
+    </div>
+    <div class="message__actions">
+      <%= link_to '編集', edit_message_path(message), class: 'message__actions-edit' %>
+      <%= button_to '削除', message_path(message), method: :delete, form_class: 'message__actions-destroy', class: 'message__actions-destroy-button', data: { turbo_confirm: '削除しますか？' } %>
+    </div>
   </div>
-  <div class="message__actions">
-    <%= link_to '編集', edit_message_path(message), class: 'message__actions-edit' %>
-    <%= button_to '削除', message_path(message), method: :delete, form_class: 'message__actions-destroy', class: 'message__actions-destroy-button', data: { turbo_confirm: '削除しますか？' } %>
-  </div>
-</div>
+<% end %>
