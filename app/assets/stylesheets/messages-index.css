@@ -1,0 +1,30 @@
+.messages-index {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100dvh;
+  gap: 20px;
+}
+
+.messages-index-body {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: calc(100dvh - 62px);
+  overflow-y: auto;
+}
+
+.messages-index__footer {
+  padding-bottom: 20px;
+}
+
+.messages-index__footer-link {
+  color: #fff;
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  background: #0ea5e9;
+  display: inline-block;
+  font-size: 16px;
+}

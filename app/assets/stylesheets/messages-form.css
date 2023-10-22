@@ -1,0 +1,22 @@
+.messages-form {
+  display: flex;
+}
+
+.messages-form__textarea {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.messages-form__submit {
+  background: none;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  background: #0ea5e9;
+  font-size: 16px;
+  cursor: pointer;
+  height: 42px;
+  margin-top: auto
+}
