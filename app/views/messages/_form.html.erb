@@ -1,4 +1,6 @@
-<%= form_with model: message, class: 'messages-form' do |f| %>
-  <%= f.text_area :content, class: 'messages-form__textarea' %>
-  <%= f.submit '送信', class: 'messages-form__submit' %>
+<%= turbo_frame_tag message do %>
+  <%= form_with model: message, class: 'messages-form' do |f| %>
+    <%= f.text_area :content, class: 'messages-form__textarea' %>
+    <%= f.submit '送信', class: 'messages-form__submit' %>
+  <% end %>
 <% end %>
