@@ -31,6 +31,7 @@ class MessagesController < ApplicationController
 
   def destroy
     @message.destroy!
+    flash.now[:alert] = '削除しました'
   end
 
   private
