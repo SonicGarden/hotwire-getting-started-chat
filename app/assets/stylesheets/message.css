@@ -1,0 +1,112 @@
+.message {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message__body-created-at {
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.message__body-content {
+  margin-block: 0;
+}
+
+.message__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.message__evaluation {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.message__evaluation-value {
+  color: limegreen;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+  width: 48px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.message__evaluation-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.message__evaluation-setting-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.message__evaluation-setting-button {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.message__evaluation-setting-button.is-plus {
+  color: #0ea5e9;
+  border-color: #0ea5e9;
+}
+
+.message__evaluation-setting-button.is-minus {
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+.message__evaluation-button {
+  background: transparent;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.message__evaluation-button.is-hidden {
+  display: none;
+}
+
+.message__actions-edit {
+  color: #333;
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  background: #94a3b8;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.message__actions-destroy {
+  display: inline-block;
+}
+
+.message__actions-destroy-button {
+  background: none;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  background: #dc2626;
+  font-size: 16px;
+  cursor: pointer;
+}

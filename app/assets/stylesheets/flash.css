@@ -1,0 +1,23 @@
+.flash {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  padding: 10px;
+  animation: appear-then-fade 4s both;
+}
+
+@keyframes appear-then-fade {
+  0%, 100% {
+    opacity:0
+  }
+  5%, 60% {
+    opacity:1
+  }
+}
