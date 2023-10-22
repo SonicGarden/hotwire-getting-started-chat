@@ -1,0 +1,4 @@
+<%= form_with model: message, class: 'messages-form' do |f| %>
+  <%= f.text_area :content, class: 'messages-form__textarea' %>
+  <%= f.submit '送信', class: 'messages-form__submit' %>
+<% end %>
