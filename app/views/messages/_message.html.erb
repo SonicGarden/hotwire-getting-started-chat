@@ -6,6 +6,20 @@
       <p class="message__body-content"><%= message.content %></p>
     </div>
     <div class="message__actions">
+      <%= form_with model: message, url: '', method: :patch, data: { controller: 'message-evaluation' }, class: 'message__evaluation' do |f| %>
+        <%= f.text_field :evaluation, 'data-message-evaluation-target': 'evaluationInput', readonly: true, class: 'message__evaluation-value' %>
+        <div class="message__evaluation-actions">
+          <div class="message__evaluation-setting-buttons">
+            <button type="button" data-action="message-evaluation#increaseEvaluation" class="message__evaluation-setting-button is-plus">
+              +
+            </button>
+            <button type="button" data-action="message-evaluation#decreaseEvaluation" class="message__evaluation-setting-button is-minus">
+              −
+            </button>
+          </div>
+          <%= f.submit '更新', 'data-message-evaluation-target': 'evaluationButton', class: 'message__evaluation-button' %>
+        </div>
+      <% end %>
       <%= link_to '編集', edit_message_path(message), class: 'message__actions-edit' %>
       <%= button_to '削除', message_path(message), method: :delete, form_class: 'message__actions-destroy', class: 'message__actions-destroy-button', data: { turbo_confirm: '削除しますか？', turbo_frame: '_top' } %>
     </div>
