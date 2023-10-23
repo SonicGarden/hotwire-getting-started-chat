@@ -22,9 +22,7 @@ class MessagesController < ApplicationController
   end
 
   def update
-    if @message.update(message_params)
-      redirect_to messages_path
-    else
+    unless @message.update(message_params)
       render :edit, status: :unprocessable_entity
     end
   end
