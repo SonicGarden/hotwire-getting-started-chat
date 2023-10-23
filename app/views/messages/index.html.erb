@@ -1,3 +1,5 @@
+<%= turbo_stream_from 'messages' %>
+
 <div class="messages-index container">
   <%= turbo_frame_tag 'messages', class: 'messages-index-body' do %>
     <%= render partial: 'message', collection: @messages %>
