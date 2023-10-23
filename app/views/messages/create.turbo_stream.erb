@@ -1,2 +1,3 @@
 <%= turbo_stream.append 'messages', @message %>
 <%= turbo_stream.replace 'new_message', partial: 'form', locals: { message: Message.new } %>
+<%= turbo_stream.update 'flash', partial: 'layouts/flash' %>

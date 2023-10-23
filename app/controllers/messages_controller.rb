@@ -11,7 +11,9 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    unless @message.save
+    if @message.save
+      flash.now[:notice] = '送信しました'
+    else
       render :new, status: :unprocessable_entity
     end
   end
