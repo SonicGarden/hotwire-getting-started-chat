@@ -22,7 +22,9 @@ class MessagesController < ApplicationController
   end
 
   def update
-    unless @message.update(message_params)
+    if @message.update(message_params)
+      flash.now[:notice] = '更新しました'
+    else
       render :edit, status: :unprocessable_entity
     end
   end
