@@ -6,7 +6,7 @@
       <p class="message__body-content"><%= message.content %></p>
     </div>
     <div class="message__actions">
-      <%= form_with model: message, url: '', method: :patch, data: { controller: 'message-evaluation' }, class: 'message__evaluation' do |f| %>
+      <%= form_with model: message, url: message_evaluation_path(message), method: :patch, data: { controller: 'message-evaluation', 'message-evaluation-editing-value': false }, class: 'message__evaluation' do |f| %>
         <%= f.text_field :evaluation, 'data-message-evaluation-target': 'evaluationInput', readonly: true, class: 'message__evaluation-value' %>
         <div class="message__evaluation-actions">
           <div class="message__evaluation-setting-buttons">
