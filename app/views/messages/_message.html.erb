@@ -1,5 +1,6 @@
+<% broadcast ||= false %>
 <%= turbo_frame_tag message do %>
-  <div class="message">
+  <div class="message" data-messages-target=<%= token_list(broadcastMessage: broadcast) %>>
     <div class="message__body">
       <p class="message__body-datetime"><%= l(message.created_at, format: :long) %></p>
       <p class="message__body-content"><%= message.content %></p>
