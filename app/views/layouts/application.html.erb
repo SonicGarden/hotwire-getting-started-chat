@@ -10,8 +10,8 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-  <%= turbo_frame_tag 'flash' %>
+  <body class="container">
+    <%= turbo_frame_tag 'flash' %>
     <%= yield %>
   </body>
 </html>
