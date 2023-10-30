@@ -8,10 +8,6 @@ export default class extends Controller {
     this.setEvaluationButtonVisibility();
   }
 
-  editingValueChanged() {
-    this.setEvaluationButtonVisibility();
-  }
-
   setEvaluationButtonVisibility() {
     if (this.editingValue) {
       this.evaluationButtonTarget.classList.remove('is-hidden');
@@ -23,10 +19,12 @@ export default class extends Controller {
   increaseEvaluation() {
     this.evaluationInputTarget.value = parseInt(this.evaluationInputTarget.value) + 1;
     this.editingValue = true;
+    this.setEvaluationButtonVisibility();
   }
 
   decreaseEvaluation() {
     this.evaluationInputTarget.value = parseInt(this.evaluationInputTarget.value) - 1;
     this.editingValue = true;
+    this.setEvaluationButtonVisibility();
   }
 }
